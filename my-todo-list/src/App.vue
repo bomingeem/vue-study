@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import TodoHeader from './views/TodoHeader.vue'
-import TodoElement from './views/TodoElement.vue'
-import TodoInput from './views/TodoInput.vue'
-import TodoList from './views/TodoList.vue'
-import TodoFooter from './views/TodoFooter.vue'
+import TodoHeader from './components/TodoHeader.vue'
+import TodoElement from './components/TodoElement.vue'
+import TodoInput from './components/TodoInput.vue'
+import TodoList from './components/TodoList.vue'
+import TodoFooter from './components/TodoFooter.vue'
 
   export default {
     components: {
