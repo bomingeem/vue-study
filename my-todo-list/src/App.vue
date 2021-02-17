@@ -15,6 +15,9 @@
       <todo-input />
       <todo-list />
       <todo-footer />
+      <router-link to="/foo">Go to Foo</router-link><br/>
+      <router-link to="/bar">Go to Bar</router-link>
+     <router-view></router-view>
     </v-main>
   </v-app>
 </template>
