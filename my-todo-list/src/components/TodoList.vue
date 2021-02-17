@@ -10,7 +10,7 @@
 import EventBus from "../utils/eventBus.js";
 
 export default {
-    name: 'TodoList',
+    name: "TodoList",
     created() {
         EventBus.$on("todo-item", data => {
             this.todoItems.push(data);
