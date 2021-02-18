@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div v-for="(item, index) in todoItems" :key="index">
+    <div v-for="(item, index) in propsdata" :key="index">
         {{ item }}
     </div>
 </div>
