@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import EventBus from "../utils/eventBus.js";
+// import EventBus from "../utils/eventBus.js";
 
 export default {
   name: "TodoInput",
@@ -18,7 +18,8 @@ export default {
   },
   methods: {
     saveTodo() {
-      EventBus.$emit("todo-item", this.inputTodo);
+      console.log('todoInput 컴포넌트' , this.inputTodo);
+      this.$emit("todo-item", this.inputTodo);
     }
   }
 };

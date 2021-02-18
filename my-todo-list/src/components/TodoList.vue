@@ -1,7 +1,7 @@
 <template>
 <div>
-    <div v-for="(todo) in todoItems" :key="todo">
-        {{ todo }}
+    <div v-for="(item, index) in todoItems" :key="index">
+        {{ item }}
     </div>
 </div>
 </template>
@@ -11,6 +11,7 @@ import EventBus from "../utils/eventBus.js";
 
 export default {
     name: "TodoList",
+    props: ['propsdata'],
     created() {
         EventBus.$on("todo-item", data => {
             this.todoItems.push(data);
