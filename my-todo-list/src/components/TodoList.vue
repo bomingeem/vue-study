@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(item, index) in propsdata" :key="index">
+    <div v-for="(item, index) in todoItems" :key="index">
       <router-link :to="{ name: 'todo_detail', params: { todoDetail: item } }">
         {{ item }}
       </router-link>
@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import EventBus from '../utils/eventBus.js';
+import { mapState } from 'vuex';
 
 export default {
   name: 'TodoList',
   props: ['propsdata'],
-  created() {
-    EventBus.$on('todo-item', data => {
-      this.todoItems.push(data);
-    });
+  computed: {
+    ...mapState({
+      vuex_todos: state => state.todos,
+    }),
   },
   data() {
     return {

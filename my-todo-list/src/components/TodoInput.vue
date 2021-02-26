@@ -14,6 +14,8 @@
 
 <script>
 // import EventBus from "../utils/eventBus.js";
+// import store from '../store';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'TodoInput',
@@ -24,9 +26,9 @@ export default {
   },
   methods: {
     saveTodo() {
-      console.log('todoInput 컴포넌트', this.inputTodo);
-      this.$emit('todo-item', this.inputTodo);
+      this.addTodo(this.inputTodo);
     },
+    ...mapActions(['addTodo']),
   },
 };
 </script>
